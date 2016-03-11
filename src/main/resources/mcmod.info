@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sheeeps",
+  "name": "Sheeeps!",
+  "description": "When sheep go exploring they find useful material that gets trapped in their wool.",
+  "version": "0.2.1",
+  "mcversion": "${mcversion}",
+  "url": "http://minecraft.curseforge.com/projects/sheeeps",
+  "updateUrl": "http://minecraft.curseforge.com/projects/sheeeps",
+  "authorList": ["Zulucap"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

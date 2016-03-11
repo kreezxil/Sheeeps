@@ -1,0 +1,38 @@
+item.iron_fleece.name=Iron Fleece
+item.iron_residue.name=Iron Residue
+item.iron_spawn_egg.name=Spawn Iron Ore Sheeep!
+item.diamond_fleece.name=Diamond Fleece
+item.diamond_residue.name=Diamond Residue
+item.diamond_spawn_egg.name=Spawn Diamond Ore Sheeep!
+item.coal_fleece.name=Coal Fleece
+item.coal_residue.name=Coal Residue
+item.coal_spawn_egg.name=Spawn Coal Ore Sheeep!
+item.emerald_fleece.name=Emerald Fleece
+item.emerald_residue.name=Emerald Residue
+item.emerald_spawn_egg.name=Spawn Emerald Ore Sheeep!
+item.gold_fleece.name=Gold Fleece
+item.gold_residue.name=Gold Residue
+item.gold_spawn_egg.name=Spawn Gold Ore Sheeep!
+item.glowstone_fleece.name=Glowstone Fleece
+item.glowstone_residue.name=Glowstone Residue
+item.glowstone_spawn_egg.name=Spawn Glowstone Ore Sheeep!
+item.redstone_fleece.name=Redstone Fleece
+item.redstone_residue.name=Redstone Residue
+item.redstone_spawn_egg.name=Spawn Redstone Ore Sheeep!
+item.lapis_fleece.name=Lapis Fleece
+item.lapis_residue.name=Lapis Residue
+item.lapis_spawn_egg.name=Spawn Lapis Ore Sheeep!
+
+tile.iron_wool.name=Iron Wool
+tile.diamond_wool.name=Diamond Wool
+tile.coal_wool.name=Coal Wool
+tile.emerald_wool.name=Emerald Wool
+tile.gold_wool.name=Gold Wool
+tile.glowstone_wool.name=Glowstone Wool
+tile.redstone_wool.name=Redstone Wool
+tile.lapis_wool.name=Lapis Wool
+
+tile.washer.name=Washer
+tile.separator.name=Separator
+
+itemGroup.tabSheeeps=Sheeeps!
