@@ -83,31 +83,6 @@ public class Sheeeps {
 
     public void addWorldGen(){
         // entity spawning
-
-        /*
-        EntityRegistry.addSpawn(EntityOreSheep.class, 5, 3, 5, EnumCreatureType.CREATURE,
-                BiomeGenBase.plains, BiomeGenBase.extremeHills, BiomeGenBase.forest,
-                BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.icePlains,
-                BiomeGenBase.iceMountains, BiomeGenBase.forestHills, BiomeGenBase.taigaHills,
-                BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills,
-                BiomeGenBase.jungleEdge, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills,
-                BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills,
-                BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus,
-                BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.hell
-        );
-
-        EntityRegistry.addSpawn(EntityOreSheep.class, 10, 1, 1, EnumCreatureType.MONSTER,
-                BiomeGenBase.plains, BiomeGenBase.extremeHills, BiomeGenBase.forest,
-                BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.icePlains,
-                BiomeGenBase.iceMountains, BiomeGenBase.forestHills, BiomeGenBase.taigaHills,
-                BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills,
-                BiomeGenBase.jungleEdge, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills,
-                BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills,
-                BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus,
-                BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.hell
-        );
-        */
-
         EntityRegistry.addSpawn(EntityOreSheep.class, 5, 1, 1, EnumCreatureType.AMBIENT,
                 BiomeGenBase.plains, BiomeGenBase.extremeHills, BiomeGenBase.forest,
                 BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.icePlains,

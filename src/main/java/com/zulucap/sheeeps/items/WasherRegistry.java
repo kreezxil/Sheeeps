@@ -66,7 +66,7 @@ public class WasherRegistry {
         {
             if (this.compareItemStacks(stack, (ItemStack)entry.getKey()))
             {
-                return (ItemStack)entry.getValue();
+                return (ItemStack)entry.getValue().copy();
             }
         }
 
