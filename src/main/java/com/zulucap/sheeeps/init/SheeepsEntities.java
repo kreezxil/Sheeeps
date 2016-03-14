@@ -39,6 +39,7 @@ public class SheeepsEntities {
 
         List<SheepConfig> configuredSheep = ConfigurationReference.getConfiguredSheep();
 
+        // Vanilla Ore Sheep
         SheepConfig coalConfig = configuredSheep.get(0);
         if(!coalConfig.getSheepDisabled()) {
             SheeepsEntity coalOreSheeep = new SheeepsEntity(0, "Coal Ore Sheeep", new ItemStack(SheeepsItems.coal_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/coal_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/coal_ore_sheep_fur.png"),
@@ -124,6 +125,96 @@ public class SheeepsEntities {
                     new BiomeGenBase[]{BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.extremeHillsPlus},
                     new BiomeGenBase[]{BiomeGenBase.hell});
             SheeepsEntities.register(emeraldOreSheeep);
+        }
+
+        // Mod Ore Sheep
+        SheepConfig copperConfig = configuredSheep.get(8);
+        if(!copperConfig.getSheepDisabled()) {
+            SheeepsEntity copperOreSheeep = new SheeepsEntity(8, "Copper Ore Sheeep", new ItemStack(SheeepsItems.copper_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/copper_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/copper_ore_sheep_fur.png"),
+                    copperConfig.getMaxSpawnHeight(),
+                    copperConfig.getMinSpawnHeight(),
+                    copperConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(copperOreSheeep);
+        }
+
+        SheepConfig tinConfig = configuredSheep.get(9);
+        if(!tinConfig.getSheepDisabled()) {
+            SheeepsEntity tinOreSheeep = new SheeepsEntity(9, "Tin Ore Sheeep", new ItemStack(SheeepsItems.tin_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/tin_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/tin_ore_sheep_fur.png"),
+                    tinConfig.getMaxSpawnHeight(),
+                    tinConfig.getMinSpawnHeight(),
+                    tinConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(tinOreSheeep);
+        }
+
+        SheepConfig nickelConfig = configuredSheep.get(10);
+        if(!nickelConfig.getSheepDisabled()) {
+            SheeepsEntity nickelOreSheeep = new SheeepsEntity(10, "Nickel Ore Sheeep", new ItemStack(SheeepsItems.nickel_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/nickel_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/nickel_ore_sheep_fur.png"),
+                    nickelConfig.getMaxSpawnHeight(),
+                    nickelConfig.getMinSpawnHeight(),
+                    nickelConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(nickelOreSheeep);
+        }
+
+        SheepConfig leadConfig = configuredSheep.get(11);
+        if(!leadConfig.getSheepDisabled()) {
+            SheeepsEntity leadOreSheeep = new SheeepsEntity(11, "Lead Ore Sheeep", new ItemStack(SheeepsItems.lead_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/lead_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/lead_ore_sheep_fur.png"),
+                    leadConfig.getMaxSpawnHeight(),
+                    leadConfig.getMinSpawnHeight(),
+                    leadConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(leadOreSheeep);
+        }
+
+        SheepConfig silverConfig = configuredSheep.get(12);
+        if(!silverConfig.getSheepDisabled()) {
+            SheeepsEntity silverOreSheeep = new SheeepsEntity(12, "Silver Ore Sheeep", new ItemStack(SheeepsItems.silver_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/silver_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/silver_ore_sheep_fur.png"),
+                    silverConfig.getMaxSpawnHeight(),
+                    silverConfig.getMinSpawnHeight(),
+                    silverConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(silverOreSheeep);
+        }
+
+        SheepConfig platinumConfig = configuredSheep.get(13);
+        if(!platinumConfig.getSheepDisabled()) {
+            SheeepsEntity platinumOreSheeep = new SheeepsEntity(13, "Platinum Ore Sheeep", new ItemStack(SheeepsItems.platinum_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/platinum_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/platinum_ore_sheep_fur.png"),
+                    platinumConfig.getMaxSpawnHeight(),
+                    platinumConfig.getMinSpawnHeight(),
+                    platinumConfig.getRarity(),
+                    null,
+                    new BiomeGenBase[]{BiomeGenBase.hell});
+            SheeepsEntities.register(platinumOreSheeep);
+        }
+
+        SheepConfig arditeConfig = configuredSheep.get(14);
+        if(!arditeConfig.getSheepDisabled()) {
+            SheeepsEntity arditeOreSheeep = new SheeepsEntity(14, "Ardite Ore Sheeep", new ItemStack(SheeepsItems.ardite_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/ardite_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/ardite_ore_sheep_fur.png"),
+                    arditeConfig.getMaxSpawnHeight(),
+                    arditeConfig.getMinSpawnHeight(),
+                    arditeConfig.getRarity(),
+                    new BiomeGenBase[]{BiomeGenBase.hell},
+                    null);
+            SheeepsEntities.register(arditeOreSheeep);
+        }
+
+        SheepConfig cobaltConfig = configuredSheep.get(15);
+        if(!cobaltConfig.getSheepDisabled()) {
+            SheeepsEntity cobaltOreSheeep = new SheeepsEntity(15, "Cobalt Ore Sheeep", new ItemStack(SheeepsItems.cobalt_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/cobalt_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/cobalt_ore_sheep_fur.png"),
+                    cobaltConfig.getMaxSpawnHeight(),
+                    cobaltConfig.getMinSpawnHeight(),
+                    cobaltConfig.getRarity(),
+                    new BiomeGenBase[]{BiomeGenBase.hell},
+                    null
+                    );
+            SheeepsEntities.register(cobaltOreSheeep);
         }
     }
 

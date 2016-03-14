@@ -22,6 +22,7 @@ public class WasherRegistry {
     }
 
     public WasherRegistry(){
+        /* Vanilla Ores */
         this.addWasherRecipeForItem(SheeepsItems.coal_fleece, new ItemStack(SheeepsBlocks.coal_wool));
         this.addWasherRecipeForItem(SheeepsItems.iron_fleece, new ItemStack(SheeepsBlocks.iron_wool));
         this.addWasherRecipeForItem(SheeepsItems.diamond_fleece, new ItemStack(SheeepsBlocks.diamond_wool));
@@ -30,6 +31,16 @@ public class WasherRegistry {
         this.addWasherRecipeForItem(SheeepsItems.glowstone_fleece, new ItemStack(SheeepsBlocks.glowstone_wool));
         this.addWasherRecipeForItem(SheeepsItems.redstone_fleece, new ItemStack(SheeepsBlocks.redstone_wool));
         this.addWasherRecipeForItem(SheeepsItems.lapis_fleece, new ItemStack(SheeepsBlocks.lapis_wool));
+
+        /* Mod Ores */
+        this.addWasherRecipeForItem(SheeepsItems.copper_fleece, new ItemStack(SheeepsBlocks.copper_wool));
+        this.addWasherRecipeForItem(SheeepsItems.tin_fleece, new ItemStack(SheeepsBlocks.tin_wool));
+        this.addWasherRecipeForItem(SheeepsItems.nickel_fleece, new ItemStack(SheeepsBlocks.nickel_wool));
+        this.addWasherRecipeForItem(SheeepsItems.lead_fleece, new ItemStack(SheeepsBlocks.lead_wool));
+        this.addWasherRecipeForItem(SheeepsItems.silver_fleece, new ItemStack(SheeepsBlocks.silver_wool));
+        this.addWasherRecipeForItem(SheeepsItems.platinum_fleece, new ItemStack(SheeepsBlocks.platinum_wool));
+        this.addWasherRecipeForItem(SheeepsItems.ardite_fleece, new ItemStack(SheeepsBlocks.ardite_wool));
+        this.addWasherRecipeForItem(SheeepsItems.cobalt_fleece, new ItemStack(SheeepsBlocks.cobalt_wool));
     }
 
     /**

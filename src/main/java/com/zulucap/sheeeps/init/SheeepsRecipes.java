@@ -119,6 +119,7 @@ public class SheeepsRecipes {
 
         final float WOOL_SMELT_XP = 0.0F;   // negative XP would probably cause a problem :)
 
+        // Vanilla Ores
         GameRegistry.addSmelting(SheeepsItems.iron_residue, new ItemStack(Items.iron_ingot, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.diamond_residue, new ItemStack(Items.diamond, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.coal_residue, new ItemStack(Blocks.coal_block, 1), WOOL_SMELT_XP);
@@ -127,5 +128,17 @@ public class SheeepsRecipes {
         GameRegistry.addSmelting(SheeepsItems.glowstone_residue, new ItemStack(Blocks.glowstone, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.redstone_residue, new ItemStack(Blocks.redstone_block, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.lapis_residue, new ItemStack(Items.dye, 8, 4), WOOL_SMELT_XP);
+
+        /*
+        // Mod Ores - get result type from ore dict
+        GameRegistry.addSmelting(SheeepsItems.copper_residue, new ItemStack(Items.iron_ingot, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.tin_residue, new ItemStack(Items.diamond, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.nickel_residue, new ItemStack(Blocks.coal_block, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.lead_residue, new ItemStack(Items.emerald, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.silver_residue, new ItemStack(Items.gold_ingot, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.platinum_residue, new ItemStack(Blocks.glowstone, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.ardite_residue, new ItemStack(Blocks.redstone_block, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.cobalt_residue, new ItemStack(Items.dye, 8, 4), WOOL_SMELT_XP);
+        */
     }
 }
