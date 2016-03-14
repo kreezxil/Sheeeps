@@ -79,6 +79,9 @@ public class Sheeeps {
     @EventHandler
     public void postInit(FMLPostInitializationEvent e){
         proxy.postInit();
+
+        SheeepsBlocks.modRegister();
+        SheeepsItems.modRegister();
     }
 
     public void addWorldGen(){

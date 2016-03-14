@@ -16,7 +16,7 @@ public abstract class CommonProxy{
     }
 
     public void postInit(){
-
+        SheeepsEntities.registerModSheeep();
     }
 
     public abstract EntityPlayer getClientPlayer();

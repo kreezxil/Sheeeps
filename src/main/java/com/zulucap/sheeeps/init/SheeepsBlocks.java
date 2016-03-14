@@ -79,22 +79,48 @@ public class SheeepsBlocks {
         GameRegistry.registerBlock(redstone_wool, redstone_wool.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(lapis_wool, lapis_wool.getUnlocalizedName().substring(5));
 
-        // Mod Ores
-        // Add check for each against ore dict
-        GameRegistry.registerBlock(copper_wool, copper_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(tin_wool, tin_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(nickel_wool, nickel_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(lead_wool, lead_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(silver_wool, silver_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(platinum_wool, platinum_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(ardite_wool, ardite_wool.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(cobalt_wool, cobalt_wool.getUnlocalizedName().substring(5));
-
         GameRegistry.registerBlock(washer, washer.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(separator, separator.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(separator_on_1, separator_on_1.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(separator_on_2, separator_on_2.getUnlocalizedName().substring(5));
 
+    }
+
+    public static void modRegister(){
+        // Register Ores & Renders
+        // If they have been added to the ore dictionary
+        if(OreDictionary.getOres("ingotCopper").size() > 0) {
+            GameRegistry.registerBlock(copper_wool, copper_wool.getUnlocalizedName().substring(5));
+            registerRender(copper_wool);
+        }
+        if(OreDictionary.getOres("ingotTin").size() > 0) {
+            GameRegistry.registerBlock(tin_wool, tin_wool.getUnlocalizedName().substring(5));
+            registerRender(tin_wool);
+        }
+        if(OreDictionary.getOres("ingotNickel").size() > 0) {
+            GameRegistry.registerBlock(nickel_wool, nickel_wool.getUnlocalizedName().substring(5));
+            registerRender(nickel_wool);
+        }
+        if(OreDictionary.getOres("ingotLead").size() > 0) {
+            GameRegistry.registerBlock(lead_wool, lead_wool.getUnlocalizedName().substring(5));
+            registerRender(lead_wool);
+        }
+        if(OreDictionary.getOres("ingotSilver").size() > 0) {
+            GameRegistry.registerBlock(silver_wool, silver_wool.getUnlocalizedName().substring(5));
+            registerRender(silver_wool);
+        }
+        if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
+            GameRegistry.registerBlock(platinum_wool, platinum_wool.getUnlocalizedName().substring(5));
+            registerRender(platinum_wool);
+        }
+        if(OreDictionary.getOres("ingotArdite").size() > 0) {
+            GameRegistry.registerBlock(ardite_wool, ardite_wool.getUnlocalizedName().substring(5));
+            registerRender(ardite_wool);
+        }
+        if(OreDictionary.getOres("ingotCobalt").size() > 0) {
+            GameRegistry.registerBlock(cobalt_wool, cobalt_wool.getUnlocalizedName().substring(5));
+            registerRender(cobalt_wool);
+        }
     }
 
     public static void registerRenders(){
@@ -107,16 +133,6 @@ public class SheeepsBlocks {
         registerRender(glowstone_wool);
         registerRender(redstone_wool);
         registerRender(lapis_wool);
-
-        // Mod Ores
-        registerRender(copper_wool);
-        registerRender(tin_wool);
-        registerRender(nickel_wool);
-        registerRender(lead_wool);
-        registerRender(silver_wool);
-        registerRender(platinum_wool);
-        registerRender(ardite_wool);
-        registerRender(cobalt_wool);
 
         registerRender(washer);
         registerRender(separator);

@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.*;
 
@@ -126,10 +127,14 @@ public class SheeepsEntities {
                     new BiomeGenBase[]{BiomeGenBase.hell});
             SheeepsEntities.register(emeraldOreSheeep);
         }
+    }
+
+    public static void registerModSheeep(){
+        List<SheepConfig> configuredSheep = ConfigurationReference.getConfiguredSheep();
 
         // Mod Ore Sheep
         SheepConfig copperConfig = configuredSheep.get(8);
-        if(!copperConfig.getSheepDisabled()) {
+        if(!copperConfig.getSheepDisabled() && OreDictionary.getOres("ingotCopper").size() > 0) {
             SheeepsEntity copperOreSheeep = new SheeepsEntity(8, "Copper Ore Sheeep", new ItemStack(SheeepsItems.copper_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/copper_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/copper_ore_sheep_fur.png"),
                     copperConfig.getMaxSpawnHeight(),
                     copperConfig.getMinSpawnHeight(),
@@ -140,7 +145,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig tinConfig = configuredSheep.get(9);
-        if(!tinConfig.getSheepDisabled()) {
+        if(!tinConfig.getSheepDisabled() && OreDictionary.getOres("ingotTin").size() > 0) {
             SheeepsEntity tinOreSheeep = new SheeepsEntity(9, "Tin Ore Sheeep", new ItemStack(SheeepsItems.tin_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/tin_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/tin_ore_sheep_fur.png"),
                     tinConfig.getMaxSpawnHeight(),
                     tinConfig.getMinSpawnHeight(),
@@ -151,7 +156,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig nickelConfig = configuredSheep.get(10);
-        if(!nickelConfig.getSheepDisabled()) {
+        if(!nickelConfig.getSheepDisabled() && OreDictionary.getOres("ingotNickel").size() > 0) {
             SheeepsEntity nickelOreSheeep = new SheeepsEntity(10, "Nickel Ore Sheeep", new ItemStack(SheeepsItems.nickel_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/nickel_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/nickel_ore_sheep_fur.png"),
                     nickelConfig.getMaxSpawnHeight(),
                     nickelConfig.getMinSpawnHeight(),
@@ -162,7 +167,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig leadConfig = configuredSheep.get(11);
-        if(!leadConfig.getSheepDisabled()) {
+        if(!leadConfig.getSheepDisabled() && OreDictionary.getOres("ingotLead").size() > 0) {
             SheeepsEntity leadOreSheeep = new SheeepsEntity(11, "Lead Ore Sheeep", new ItemStack(SheeepsItems.lead_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/lead_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/lead_ore_sheep_fur.png"),
                     leadConfig.getMaxSpawnHeight(),
                     leadConfig.getMinSpawnHeight(),
@@ -173,7 +178,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig silverConfig = configuredSheep.get(12);
-        if(!silverConfig.getSheepDisabled()) {
+        if(!silverConfig.getSheepDisabled() && OreDictionary.getOres("ingotSilver").size() > 0) {
             SheeepsEntity silverOreSheeep = new SheeepsEntity(12, "Silver Ore Sheeep", new ItemStack(SheeepsItems.silver_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/silver_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/silver_ore_sheep_fur.png"),
                     silverConfig.getMaxSpawnHeight(),
                     silverConfig.getMinSpawnHeight(),
@@ -184,7 +189,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig platinumConfig = configuredSheep.get(13);
-        if(!platinumConfig.getSheepDisabled()) {
+        if(!platinumConfig.getSheepDisabled() && OreDictionary.getOres("ingotPlatinum").size() > 0) {
             SheeepsEntity platinumOreSheeep = new SheeepsEntity(13, "Platinum Ore Sheeep", new ItemStack(SheeepsItems.platinum_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/platinum_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/platinum_ore_sheep_fur.png"),
                     platinumConfig.getMaxSpawnHeight(),
                     platinumConfig.getMinSpawnHeight(),
@@ -195,7 +200,7 @@ public class SheeepsEntities {
         }
 
         SheepConfig arditeConfig = configuredSheep.get(14);
-        if(!arditeConfig.getSheepDisabled()) {
+        if(!arditeConfig.getSheepDisabled() && OreDictionary.getOres("ingotArdite").size() > 0) {
             SheeepsEntity arditeOreSheeep = new SheeepsEntity(14, "Ardite Ore Sheeep", new ItemStack(SheeepsItems.ardite_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/ardite_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/ardite_ore_sheep_fur.png"),
                     arditeConfig.getMaxSpawnHeight(),
                     arditeConfig.getMinSpawnHeight(),
@@ -206,14 +211,14 @@ public class SheeepsEntities {
         }
 
         SheepConfig cobaltConfig = configuredSheep.get(15);
-        if(!cobaltConfig.getSheepDisabled()) {
+        if(!cobaltConfig.getSheepDisabled() && OreDictionary.getOres("ingotCobalt").size() > 0) {
             SheeepsEntity cobaltOreSheeep = new SheeepsEntity(15, "Cobalt Ore Sheeep", new ItemStack(SheeepsItems.cobalt_fleece, 1), new ResourceLocation(Reference.MODID + ":textures/entity/cobalt_ore_sheep_sheared.png"), new ResourceLocation(Reference.MODID + ":textures/entity/cobalt_ore_sheep_fur.png"),
                     cobaltConfig.getMaxSpawnHeight(),
                     cobaltConfig.getMinSpawnHeight(),
                     cobaltConfig.getRarity(),
                     new BiomeGenBase[]{BiomeGenBase.hell},
                     null
-                    );
+            );
             SheeepsEntities.register(cobaltOreSheeep);
         }
     }
