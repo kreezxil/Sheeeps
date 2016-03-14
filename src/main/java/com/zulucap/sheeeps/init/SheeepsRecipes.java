@@ -5,6 +5,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.IFuelHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.List;
 
 /**
  * Created by Dan on 3/5/2016.
@@ -122,23 +125,51 @@ public class SheeepsRecipes {
         // Vanilla Ores
         GameRegistry.addSmelting(SheeepsItems.iron_residue, new ItemStack(Items.iron_ingot, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.diamond_residue, new ItemStack(Items.diamond, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.coal_residue, new ItemStack(Blocks.coal_block, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.coal_residue, new ItemStack(Items.coal, 4), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.emerald_residue, new ItemStack(Items.emerald, 1), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.gold_residue, new ItemStack(Items.gold_ingot, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.glowstone_residue, new ItemStack(Blocks.glowstone, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.redstone_residue, new ItemStack(Blocks.redstone_block, 1), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.glowstone_residue, new ItemStack(Items.glowstone_dust, 4), WOOL_SMELT_XP);
+        GameRegistry.addSmelting(SheeepsItems.redstone_residue, new ItemStack(Items.redstone, 4), WOOL_SMELT_XP);
         GameRegistry.addSmelting(SheeepsItems.lapis_residue, new ItemStack(Items.dye, 8, 4), WOOL_SMELT_XP);
+    }
 
-        /*
-        // Mod Ores - get result type from ore dict
-        GameRegistry.addSmelting(SheeepsItems.copper_residue, new ItemStack(Items.iron_ingot, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.tin_residue, new ItemStack(Items.diamond, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.nickel_residue, new ItemStack(Blocks.coal_block, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.lead_residue, new ItemStack(Items.emerald, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.silver_residue, new ItemStack(Items.gold_ingot, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.platinum_residue, new ItemStack(Blocks.glowstone, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.ardite_residue, new ItemStack(Blocks.redstone_block, 1), WOOL_SMELT_XP);
-        GameRegistry.addSmelting(SheeepsItems.cobalt_residue, new ItemStack(Items.dye, 8, 4), WOOL_SMELT_XP);
-        */
+    public static void addModFurnaceRecipes(){
+
+        final float WOOL_SMELT_XP = 0.0F;   // negative XP would probably cause a problem :)
+
+        List<ItemStack> copperOres = OreDictionary.getOres("ingotCopper");
+        List<ItemStack> tinOres = OreDictionary.getOres("ingotTin");
+        List<ItemStack> nickelOres = OreDictionary.getOres("ingotNickel");
+        List<ItemStack> leadOres = OreDictionary.getOres("ingotLead");
+        List<ItemStack> silverOres = OreDictionary.getOres("ingotSilver");
+        List<ItemStack> platinumOres = OreDictionary.getOres("ingotPlatinum");
+        List<ItemStack> arditeOres = OreDictionary.getOres("ingotArdite");
+        List<ItemStack> cobaltOres = OreDictionary.getOres("ingotCobalt");
+
+        if(copperOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.copper_residue, new ItemStack(copperOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(tinOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.tin_residue, new ItemStack(tinOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(nickelOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.nickel_residue, new ItemStack(nickelOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(leadOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.lead_residue, new ItemStack(leadOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(silverOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.silver_residue, new ItemStack(silverOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(platinumOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.platinum_residue, new ItemStack(platinumOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(arditeOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.ardite_residue, new ItemStack(arditeOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+        if(cobaltOres.size() > 0) {
+            GameRegistry.addSmelting(SheeepsItems.cobalt_residue, new ItemStack(cobaltOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+        }
+
     }
 }

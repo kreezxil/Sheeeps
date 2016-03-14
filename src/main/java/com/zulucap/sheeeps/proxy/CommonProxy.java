@@ -1,6 +1,9 @@
 package com.zulucap.sheeeps.proxy;
 
 import com.zulucap.sheeeps.init.SheeepsEntities;
+import com.zulucap.sheeeps.init.SheeepsRecipes;
+import com.zulucap.sheeeps.items.SeparatorRegistry;
+import com.zulucap.sheeeps.items.WasherRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 
 /**
@@ -17,6 +20,9 @@ public abstract class CommonProxy{
 
     public void postInit(){
         SheeepsEntities.registerModSheeep();
+        WasherRegistry.instance().addModWasherRecipes();
+        SeparatorRegistry.instance().addModSeparatorRecipes();
+        SheeepsRecipes.addModFurnaceRecipes();
     }
 
     public abstract EntityPlayer getClientPlayer();

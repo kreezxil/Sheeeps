@@ -6,6 +6,7 @@ import com.zulucap.sheeeps.init.SheeepsItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Map;
 
@@ -32,16 +33,33 @@ public class SeparatorRegistry {
         this.addSeparatorRecipeForBlock(SheeepsBlocks.glowstone_wool, new ItemStack(SheeepsItems.glowstone_residue), 0.85F);
         this.addSeparatorRecipeForBlock(SheeepsBlocks.redstone_wool, new ItemStack(SheeepsItems.redstone_residue), 0.85F);
         this.addSeparatorRecipeForBlock(SheeepsBlocks.lapis_wool, new ItemStack(SheeepsItems.lapis_residue), 0.9F);
+    }
 
-        /* Mod Ores */
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.copper_wool, new ItemStack(SheeepsItems.copper_residue), 0.5F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.tin_wool, new ItemStack(SheeepsItems.tin_residue), 0.7F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.nickel_wool, new ItemStack(SheeepsItems.nickel_residue), 1.0F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.lead_wool, new ItemStack(SheeepsItems.lead_residue), 1.0F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.silver_wool, new ItemStack(SheeepsItems.silver_residue), 0.7F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.platinum_wool, new ItemStack(SheeepsItems.platinum_residue), 0.85F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.ardite_wool, new ItemStack(SheeepsItems.ardite_residue), 0.85F);
-        this.addSeparatorRecipeForBlock(SheeepsBlocks.cobalt_wool, new ItemStack(SheeepsItems.cobalt_residue), 0.9F);
+    public void addModSeparatorRecipes(){
+        if(OreDictionary.getOres("ingotCopper").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.copper_wool, new ItemStack(SheeepsItems.copper_residue), 0.5F);
+        }
+        if(OreDictionary.getOres("ingotTin").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.tin_wool, new ItemStack(SheeepsItems.tin_residue), 0.7F);
+        }
+        if(OreDictionary.getOres("ingotNickel").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.nickel_wool, new ItemStack(SheeepsItems.nickel_residue), 1.0F);
+        }
+        if(OreDictionary.getOres("ingotLead").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.lead_wool, new ItemStack(SheeepsItems.lead_residue), 1.0F);
+        }
+        if(OreDictionary.getOres("ingotSilver").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.silver_wool, new ItemStack(SheeepsItems.silver_residue), 0.7F);
+        }
+        if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.platinum_wool, new ItemStack(SheeepsItems.platinum_residue), 0.85F);
+        }
+        if(OreDictionary.getOres("ingotArdite").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.ardite_wool, new ItemStack(SheeepsItems.ardite_residue), 0.85F);
+        }
+        if(OreDictionary.getOres("ingotCobalt").size() > 0) {
+            this.addSeparatorRecipeForBlock(SheeepsBlocks.cobalt_wool, new ItemStack(SheeepsItems.cobalt_residue), 0.9F);
+        }
     }
 
     /**

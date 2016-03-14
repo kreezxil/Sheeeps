@@ -5,6 +5,7 @@ import com.zulucap.sheeeps.init.SheeepsBlocks;
 import com.zulucap.sheeeps.init.SheeepsItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Map;
 
@@ -31,18 +32,34 @@ public class WasherRegistry {
         this.addWasherRecipeForItem(SheeepsItems.glowstone_fleece, new ItemStack(SheeepsBlocks.glowstone_wool));
         this.addWasherRecipeForItem(SheeepsItems.redstone_fleece, new ItemStack(SheeepsBlocks.redstone_wool));
         this.addWasherRecipeForItem(SheeepsItems.lapis_fleece, new ItemStack(SheeepsBlocks.lapis_wool));
-
-        /* Mod Ores */
-        this.addWasherRecipeForItem(SheeepsItems.copper_fleece, new ItemStack(SheeepsBlocks.copper_wool));
-        this.addWasherRecipeForItem(SheeepsItems.tin_fleece, new ItemStack(SheeepsBlocks.tin_wool));
-        this.addWasherRecipeForItem(SheeepsItems.nickel_fleece, new ItemStack(SheeepsBlocks.nickel_wool));
-        this.addWasherRecipeForItem(SheeepsItems.lead_fleece, new ItemStack(SheeepsBlocks.lead_wool));
-        this.addWasherRecipeForItem(SheeepsItems.silver_fleece, new ItemStack(SheeepsBlocks.silver_wool));
-        this.addWasherRecipeForItem(SheeepsItems.platinum_fleece, new ItemStack(SheeepsBlocks.platinum_wool));
-        this.addWasherRecipeForItem(SheeepsItems.ardite_fleece, new ItemStack(SheeepsBlocks.ardite_wool));
-        this.addWasherRecipeForItem(SheeepsItems.cobalt_fleece, new ItemStack(SheeepsBlocks.cobalt_wool));
     }
 
+    public void addModWasherRecipes(){
+        if(OreDictionary.getOres("ingotCopper").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.copper_fleece, new ItemStack(SheeepsBlocks.copper_wool));
+        }
+        if(OreDictionary.getOres("ingotTin").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.tin_fleece, new ItemStack(SheeepsBlocks.tin_wool));
+        }
+        if(OreDictionary.getOres("ingotNickel").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.nickel_fleece, new ItemStack(SheeepsBlocks.nickel_wool));
+        }
+        if(OreDictionary.getOres("ingotLead").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.lead_fleece, new ItemStack(SheeepsBlocks.lead_wool));
+        }
+        if(OreDictionary.getOres("ingotSilver").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.silver_fleece, new ItemStack(SheeepsBlocks.silver_wool));
+        }
+        if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.platinum_fleece, new ItemStack(SheeepsBlocks.platinum_wool));
+        }
+        if(OreDictionary.getOres("ingotArdite").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.ardite_fleece, new ItemStack(SheeepsBlocks.ardite_wool));
+        }
+        if(OreDictionary.getOres("ingotCobalt").size() > 0) {
+            this.addWasherRecipeForItem(SheeepsItems.cobalt_fleece, new ItemStack(SheeepsBlocks.cobalt_wool));
+        }
+    }
     /**
      * Adds a smelting recipe, where the input item is an instance of Block.
      */
