@@ -140,6 +140,35 @@ public class SheeepsBlocks {
         registerRender(separator_on_2);
     }
 
+    public static void modRegisterRenders(){
+        // Register Ores & Renders
+        // If they have been added to the ore dictionary
+        if(OreDictionary.getOres("ingotCopper").size() > 0) {
+            registerRender(copper_wool);
+        }
+        if(OreDictionary.getOres("ingotTin").size() > 0) {
+            registerRender(tin_wool);
+        }
+        if(OreDictionary.getOres("ingotNickel").size() > 0) {
+            registerRender(nickel_wool);
+        }
+        if(OreDictionary.getOres("ingotLead").size() > 0) {
+            registerRender(lead_wool);
+        }
+        if(OreDictionary.getOres("ingotSilver").size() > 0) {
+            registerRender(silver_wool);
+        }
+        if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
+            registerRender(platinum_wool);
+        }
+        if(OreDictionary.getOres("ingotArdite").size() > 0) {
+            registerRender(ardite_wool);
+        }
+        if(OreDictionary.getOres("ingotCobalt").size() > 0) {
+            registerRender(cobalt_wool);
+        }
+    }
+
     public static void registerRender(Block block){
         Item item = Item.getItemFromBlock(block);
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));

@@ -21,12 +21,13 @@ public class EventHandlerCommon {
         Entity dude = e.entity;
     }
 
-    // Do not allow more than 40 ore sheep to spawn within the vicinity of a player on the surface
+    // Confirm to configured spawn density
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onCheckSpawn(LivingSpawnEvent.CheckSpawn e){
         Entity dude = e.entity;
+
         if(dude instanceof EntityOreSheep){
-            List<EntityOreSheep> loadedSheeeps = e.world.getEntitiesWithinAABB(EntityOreSheep.class, new AxisAlignedBB(e.entity.getPosition().getX() + 128, 0, e.entity.getPosition().getZ() + 128, e.entity.getPosition().getX() - 128, 255, e.entity.getPosition().getZ() - 128));
+            List<EntityOreSheep> loadedSheeeps = e.world.getEntitiesWithinAABB(EntityOreSheep.class, new AxisAlignedBB(e.entity.getPosition().getX() + 128, 64, e.entity.getPosition().getZ() + 128, e.entity.getPosition().getX() - 128, 255, e.entity.getPosition().getZ() - 128));
             if(loadedSheeeps.size() > ConfigurationReference.getSheepDensity()) e.setResult(Event.Result.DENY);
         }
 

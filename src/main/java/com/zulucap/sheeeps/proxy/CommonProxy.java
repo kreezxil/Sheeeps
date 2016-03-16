@@ -1,6 +1,8 @@
 package com.zulucap.sheeeps.proxy;
 
+import com.zulucap.sheeeps.init.SheeepsBlocks;
 import com.zulucap.sheeeps.init.SheeepsEntities;
+import com.zulucap.sheeeps.init.SheeepsItems;
 import com.zulucap.sheeeps.init.SheeepsRecipes;
 import com.zulucap.sheeeps.items.SeparatorRegistry;
 import com.zulucap.sheeeps.items.WasherRegistry;
@@ -19,6 +21,8 @@ public abstract class CommonProxy{
     }
 
     public void postInit(){
+        SheeepsItems.modRegister();
+        SheeepsBlocks.modRegister();
         SheeepsEntities.registerModSheeep();
         WasherRegistry.instance().addModWasherRecipes();
         SeparatorRegistry.instance().addModSeparatorRecipes();

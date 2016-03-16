@@ -18,7 +18,8 @@ public class ConfigurationHandler {
             configuration.load();
 
             // Read in properties
-            ConfigurationReference.setSheepDensity(configuration.get(Configuration.CATEGORY_GENERAL, "sheepDensity", 50, "Sets the spawn density for Sheeeps").getInt(40));
+            ConfigurationReference.setSheepDensity(configuration.get(Configuration.CATEGORY_GENERAL, "sheepDensity", 20, "Sets the spawn density for Sheeeps").getInt(20));
+            ConfigurationReference.setSheepRarity(configuration.get(Configuration.CATEGORY_GENERAL, "sheepRarity", 5, "Sets the rarity for Sheeeps. High numbers means they will spawn more often").getInt(5));
 
             // Create new sheep, push to config reference sheep array
 

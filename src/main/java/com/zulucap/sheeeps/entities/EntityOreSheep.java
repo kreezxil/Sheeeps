@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
@@ -75,8 +76,15 @@ public class EntityOreSheep extends EntitySheep {
      */
     @Override
     public boolean getCanSpawnHere() {
-        //BiomeGenBase biome = worldObj.getBiomeGenForCoords(getPosition());
-        //return biome == BiomeGenBase.hell || super.getCanSpawnHere();
+        /**
+         * Checks if the entity's current position is a valid location to spawn this entity.
+         */
+        int i = MathHelper.floor_double(this.posX);
+        int j = MathHelper.floor_double(this.getEntityBoundingBox().minY);
+        int k = MathHelper.floor_double(this.posZ);
+        BlockPos blockpos = new BlockPos(i, j, k);
+        //return this.worldObj.getBlockState(blockpos.down()).getBlock() == this.spawnableBlock;
+
         return true;
     }
 

@@ -147,29 +147,52 @@ public class SheeepsRecipes {
         List<ItemStack> cobaltOres = OreDictionary.getOres("ingotCobalt");
 
         if(copperOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.copper_residue, new ItemStack(copperOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack copperOre = copperOres.get(0);
+            copperOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.copper_residue, copperOre, WOOL_SMELT_XP);
         }
         if(tinOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.tin_residue, new ItemStack(tinOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack tinOre = tinOres.get(0);
+            tinOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.tin_residue, tinOre, WOOL_SMELT_XP);
         }
         if(nickelOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.nickel_residue, new ItemStack(nickelOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack nickelOre = nickelOres.get(0);
+            nickelOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.nickel_residue, nickelOre, WOOL_SMELT_XP);
         }
         if(leadOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.lead_residue, new ItemStack(leadOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack leadOre = leadOres.get(0);
+            leadOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.lead_residue, leadOre, WOOL_SMELT_XP);
         }
         if(silverOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.silver_residue, new ItemStack(silverOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack silverOre = silverOres.get(0);
+            silverOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.silver_residue, silverOre, WOOL_SMELT_XP);
         }
         if(platinumOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.platinum_residue, new ItemStack(platinumOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack platinumOre = platinumOres.get(0);
+            platinumOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.platinum_residue, platinumOre, WOOL_SMELT_XP);
         }
         if(arditeOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.ardite_residue, new ItemStack(arditeOres.get(0).getItem(), 1), WOOL_SMELT_XP);
+            ItemStack arditeOre = arditeOres.get(0);
+            arditeOre.stackSize = 1;
+
+            GameRegistry.addSmelting(SheeepsItems.ardite_residue, arditeOre, WOOL_SMELT_XP);
         }
         if(cobaltOres.size() > 0) {
-            GameRegistry.addSmelting(SheeepsItems.cobalt_residue, new ItemStack(cobaltOres.get(0).getItem(), 1), WOOL_SMELT_XP);
-        }
+            ItemStack cobaltOre = cobaltOres.get(0);
+            cobaltOre.stackSize = 1;
 
+            GameRegistry.addSmelting(SheeepsItems.cobalt_residue, cobaltOre, WOOL_SMELT_XP);
+        }
     }
 }

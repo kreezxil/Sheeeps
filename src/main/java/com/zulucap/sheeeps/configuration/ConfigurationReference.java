@@ -12,6 +12,7 @@ import java.util.Map;
  */
 public class ConfigurationReference {
     private static int sheepDensity;
+    private static int sheepRarity;
     private static List<SheepConfig> sheepConfigs = new ArrayList<SheepConfig>();
 
     public static int getSheepDensity(){
@@ -20,6 +21,14 @@ public class ConfigurationReference {
 
     public static void setSheepDensity(int configSheepDensity){
         sheepDensity = configSheepDensity;
+    }
+
+    public static int getSheepRarity(){
+        return sheepRarity;
+    }
+
+    public static void setSheepRarity(int configSheepRarity){
+        sheepRarity = configSheepRarity;
     }
 
     public static List<SheepConfig> getConfiguredSheep(){

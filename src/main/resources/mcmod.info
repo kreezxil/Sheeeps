@@ -3,7 +3,7 @@
   "modid": "sheeeps",
   "name": "Sheeeps!",
   "description": "When sheep go exploring they find useful material that gets trapped in their wool.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "mcversion": "${mcversion}",
   "url": "http://minecraft.curseforge.com/projects/sheeeps",
   "updateUrl": "http://minecraft.curseforge.com/projects/sheeeps",

@@ -5,6 +5,7 @@ package com.zulucap.sheeeps;
  */
 
 import com.zulucap.sheeeps.configuration.ConfigurationHandler;
+import com.zulucap.sheeeps.configuration.ConfigurationReference;
 import com.zulucap.sheeeps.entities.EntityOreSheep;
 import com.zulucap.sheeeps.events.EventHandlerCommon;
 import com.zulucap.sheeeps.gui.GuiHandler;
@@ -79,14 +80,11 @@ public class Sheeeps {
     @EventHandler
     public void postInit(FMLPostInitializationEvent e){
         proxy.postInit();
-
-        SheeepsBlocks.modRegister();
-        SheeepsItems.modRegister();
     }
 
     public void addWorldGen(){
         // entity spawning
-        EntityRegistry.addSpawn(EntityOreSheep.class, 5, 1, 1, EnumCreatureType.AMBIENT,
+        EntityRegistry.addSpawn(EntityOreSheep.class, ConfigurationReference.getSheepRarity(), 1, 1, EnumCreatureType.MONSTER,
                 BiomeGenBase.plains, BiomeGenBase.extremeHills, BiomeGenBase.forest,
                 BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.icePlains,
                 BiomeGenBase.iceMountains, BiomeGenBase.forestHills, BiomeGenBase.taigaHills,
