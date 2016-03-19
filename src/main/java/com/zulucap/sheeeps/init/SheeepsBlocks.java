@@ -91,35 +91,27 @@ public class SheeepsBlocks {
         // If they have been added to the ore dictionary
         if(OreDictionary.getOres("ingotCopper").size() > 0) {
             GameRegistry.registerBlock(copper_wool, copper_wool.getUnlocalizedName().substring(5));
-            registerRender(copper_wool);
         }
         if(OreDictionary.getOres("ingotTin").size() > 0) {
             GameRegistry.registerBlock(tin_wool, tin_wool.getUnlocalizedName().substring(5));
-            registerRender(tin_wool);
         }
         if(OreDictionary.getOres("ingotNickel").size() > 0) {
             GameRegistry.registerBlock(nickel_wool, nickel_wool.getUnlocalizedName().substring(5));
-            registerRender(nickel_wool);
         }
         if(OreDictionary.getOres("ingotLead").size() > 0) {
             GameRegistry.registerBlock(lead_wool, lead_wool.getUnlocalizedName().substring(5));
-            registerRender(lead_wool);
         }
         if(OreDictionary.getOres("ingotSilver").size() > 0) {
             GameRegistry.registerBlock(silver_wool, silver_wool.getUnlocalizedName().substring(5));
-            registerRender(silver_wool);
         }
         if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
             GameRegistry.registerBlock(platinum_wool, platinum_wool.getUnlocalizedName().substring(5));
-            registerRender(platinum_wool);
         }
         if(OreDictionary.getOres("ingotArdite").size() > 0) {
             GameRegistry.registerBlock(ardite_wool, ardite_wool.getUnlocalizedName().substring(5));
-            registerRender(ardite_wool);
         }
         if(OreDictionary.getOres("ingotCobalt").size() > 0) {
             GameRegistry.registerBlock(cobalt_wool, cobalt_wool.getUnlocalizedName().substring(5));
-            registerRender(cobalt_wool);
         }
     }
 

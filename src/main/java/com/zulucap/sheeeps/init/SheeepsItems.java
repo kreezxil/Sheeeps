@@ -172,70 +172,46 @@ public class SheeepsItems {
     }
 
     public static void modRegister(){
-        /* Register Items & Renders */
+        /* Register Items */
         if(OreDictionary.getOres("ingotCopper").size() > 0) {
             GameRegistry.registerItem(copper_fleece, copper_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(copper_residue, copper_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(copper_spawn_egg, copper_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(copper_fleece);
-            registerRender(copper_residue);
-            registerRender(copper_spawn_egg);
         }
         if(OreDictionary.getOres("ingotTin").size() > 0) {
             GameRegistry.registerItem(tin_fleece, tin_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(tin_residue, tin_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(tin_spawn_egg, tin_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(tin_fleece);
-            registerRender(tin_residue);
-            registerRender(tin_spawn_egg);
         }
         if(OreDictionary.getOres("ingotNickel").size() > 0) {
             GameRegistry.registerItem(nickel_fleece, nickel_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(nickel_residue, nickel_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(nickel_spawn_egg, nickel_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(nickel_fleece);
-            registerRender(nickel_residue);
-            registerRender(nickel_spawn_egg);
         }
         if(OreDictionary.getOres("ingotLead").size() > 0) {
             GameRegistry.registerItem(lead_fleece, lead_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(lead_residue, lead_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(lead_spawn_egg, lead_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(lead_fleece);
-            registerRender(lead_residue);
-            registerRender(lead_spawn_egg);
         }
         if(OreDictionary.getOres("ingotSilver").size() > 0) {
             GameRegistry.registerItem(silver_fleece, silver_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(silver_residue, silver_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(silver_spawn_egg, silver_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(silver_fleece);
-            registerRender(silver_residue);
-            registerRender(silver_spawn_egg);
         }
         if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
             GameRegistry.registerItem(platinum_fleece, platinum_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(platinum_residue, platinum_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(platinum_spawn_egg, platinum_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(platinum_fleece);
-            registerRender(platinum_residue);
-            registerRender(platinum_spawn_egg);
         }
         if(OreDictionary.getOres("ingotArdite").size() > 0) {
             GameRegistry.registerItem(ardite_fleece, ardite_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(ardite_residue, ardite_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(ardite_spawn_egg, ardite_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(ardite_fleece);
-            registerRender(ardite_residue);
-            registerRender(ardite_spawn_egg);
         }
         if(OreDictionary.getOres("ingotCobalt").size() > 0) {
             GameRegistry.registerItem(cobalt_fleece, cobalt_fleece.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(cobalt_residue, cobalt_residue.getUnlocalizedName().substring(5));
             GameRegistry.registerItem(cobalt_spawn_egg, cobalt_spawn_egg.getUnlocalizedName().substring(5));
-            registerRender(cobalt_fleece);
-            registerRender(cobalt_residue);
-            registerRender(cobalt_spawn_egg);
         }
     }
 
@@ -269,6 +245,49 @@ public class SheeepsItems {
         registerRender(glowstone_spawn_egg);
         registerRender(redstone_spawn_egg);
         registerRender(lapis_spawn_egg);
+    }
+
+    public static void modRegisterRenders() {
+        if(OreDictionary.getOres("ingotCopper").size() > 0) {
+            registerRender(copper_fleece);
+            registerRender(copper_residue);
+            registerRender(copper_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotTin").size() > 0) {
+            registerRender(tin_fleece);
+            registerRender(tin_residue);
+            registerRender(tin_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotNickel").size() > 0) {
+            registerRender(nickel_fleece);
+            registerRender(nickel_residue);
+            registerRender(nickel_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotLead").size() > 0) {
+            registerRender(lead_fleece);
+            registerRender(lead_residue);
+            registerRender(lead_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotSilver").size() > 0) {
+            registerRender(silver_fleece);
+            registerRender(silver_residue);
+            registerRender(silver_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotPlatinum").size() > 0) {
+            registerRender(platinum_fleece);
+            registerRender(platinum_residue);
+            registerRender(platinum_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotArdite").size() > 0) {
+            registerRender(ardite_fleece);
+            registerRender(ardite_residue);
+            registerRender(ardite_spawn_egg);
+        }
+        if(OreDictionary.getOres("ingotCobalt").size() > 0) {
+            registerRender(cobalt_fleece);
+            registerRender(cobalt_residue);
+            registerRender(cobalt_spawn_egg);
+        }
     }
 
     public static void registerRender(Item item){

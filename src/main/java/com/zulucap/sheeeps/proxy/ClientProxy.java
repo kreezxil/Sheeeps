@@ -31,6 +31,7 @@ public class ClientProxy extends CommonProxy {
     public void postInit() {
         super.postInit();
         SheeepsBlocks.modRegisterRenders();
+        SheeepsItems.modRegisterRenders();
     }
 
     @Override
